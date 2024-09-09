@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kare Hesaplama</title>
+  </head>
+  <body>
+    <label>
+      Sayı:
+      <input type="number" id="sayi" />
+    </label>
+
+    <br /><br />
+
+    <button onclick="karesiHesapla()">Hesapla</button>
+
+    <br /><br />
+
+    <div>
+      Karesi:
+      <input type="number" id="karesi" disabled="disabled" />
+    </div>
+
+    <script>
+      function karesiHesapla() {
+        var sayiInput = document.getElementById("sayi");
+        var karesiInput = document.getElementById("karesi");
+
+        var sayi = parseFloat(sayiInput.value);
+
+        if (isNaN(sayi)) {
+          alert("Bilgilerinizi kontrol ediniz.");
+          return;
+        }
+
+        var karesi = sayi * sayi;
+        karesiInput.value = karesi;
+      }
+    </script>
+  </body>
+</html>

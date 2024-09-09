@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ACME Corporation - Eğitim</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="logo">
+            <img src="acme-corp.png" alt="Acme Corporation Logo">
+            <h2>Hayatı Kolaylaştıran Çözümler</h2>
+        </div>
+        <div id="menu">
+            <br />
+            <hr />
+            <table style="width:100%;">
+                <tr>
+                    <td><a href="index.html">Anasayfa</a></td>
+                    <td><a href="hakkimizda.html">Hakkımızda</a></td>
+                    <td><a href="egitim.html">Eğitim</a></td>
+                    <td><a href="yetenekler.html">Yetenekler</a></td>
+                    <td><a href="projeler.html">Projeler</a></td>
+                    <td><a href="iletisim.html">İletişim</a></td>
+                </tr>
+            </table>
+            <br />
+            <hr />
+        </div>
+        <div id="content">
+            <section>
+                <h2>Eğitim Programlarımız</h2>
+                <p>ACME Corporation olarak, çalışanlarımızın sürekli öğrenme ve gelişim içinde olmalarını teşvik ediyoruz. Bu amaçla, aşağıda listelenen çeşitli profesyonel gelişim kursları sunuyoruz:</p>
+
+                <ul>
+                    <li>Çizgi Film Karakter Tasarımı</li>
+                    <li>Animasyon ve Hareket Dinamikleri</li>
+                    <li>Acil Durum Yönetimi ve Ürün Güvenliği</li>
+                </ul>
+
+                <img src="acme-universite.png" alt="Acme Üniversitesi" width="400">
+                <br />
+                <hr />
+
+                <h2>Eğitim Takvimi</h2>
+                <table>
+                    <tr>
+                        <th>Kurs Adı</th>
+                        <th>Tarih</th>
+                        <th>Saat</th>
+                    </tr>
+                    <tr>
+                        <td>Çizgi Film Karakter Tasarımı</td>
+                        <td>10/06/2024</td>
+                        <td>09:00 - 17:00</td>
+                    </tr>
+                    <tr>
+                        <td>Animasyon ve Hareket Dinamikleri</td>
+                        <td>24/06/2024</td>
+                        <td>09:00 - 17:00</td>
+                    </tr>
+                    <tr>
+                        <td>Acil Durum Yönetimi ve Ürün Güvenliği</td>
+                        <td>05/06/2024</td>
+                        <td>09:00 - 17:00</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <br />
+                <hr />
+                <h2>Eğitim Kurslarına Kayıt</h2>
+                <form action="egitim.html" method="get">
+                    <table>
+                        <tr>
+                            <td><label for="name">Adınız ve Soyadınız:</label></td>
+                            <td><input type="text" id="name" name="name"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">E-posta Adresiniz:</label></td>
+                            <td><input type="email" id="email" name="email"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="course">Kurs Seçimi:</label></td>
+                            <td>
+                                <select id="course" name="course">
+                                    <option value="" selected disabled>Seçiniz</option>
+                                    <option value="karakter-tasarimi">Çizgi Film Karakter Tasarımı</option>
+                                    <option value="animasyon-dinamikleri">Animasyon ve Hareket Dinamikleri</option>
+                                    <option value="acil-durum-yonetimi">Acil Durum Yönetimi ve Ürün Güvenliği</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                    <button type="submit">Katıl</button>
+                </form>
+            </section>
+        </div>
+        <footer id="footer">
+            <br />
+            <hr />
+            <p>Kerem Albayrak &copy; 2023</p>
+        </footer>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karelerin Farkı Hesaplama</title>
+  </head>
+  <body>
+    <label>
+      X:
+      <input type="number" id="x" />
+    </label>
+
+    <br /><br />
+
+    <label>
+      Y:
+      <input type="number" id="y" />
+    </label>
+
+    <br /><br />
+
+    <button onclick="karelerinFarkiHesapla()">Hesapla</button>
+
+    <br /><br />
+
+    <div>
+      Karelerin Farkı:
+      <input type="number" id="karelerinFarki" disabled="disabled" />
+    </div>
+
+    <script>
+      function karelerinFarkiHesapla() {
+        var xInput = document.getElementById("x");
+        var yInput = document.getElementById("y");
+        var karelerinFarkiInput = document.getElementById("karelerinFarki");
+
+        var x = parseFloat(xInput.value);
+        var y = parseFloat(yInput.value);
+
+        if (isNaN(x) || isNaN(y)) {
+          alert("Bilgilerinizi kontrol ediniz.");
+          return;
+        }
+
+        var karelerinFarki = x * x - y * y;
+        if (karelerinFarki < 0) {
+          karelerinFarki = karelerinFarki * -1;
+        }
+        karelerinFarkiInput.value = karelerinFarki;
+      }
+    </script>
+  </body>
+</html>

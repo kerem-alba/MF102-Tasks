@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Görev 06 - Saat ve Renk Değiştirici</title>
+    <style>
+        #clock {
+            font-size: 2em;
+            margin: 20px;
+        }
+        #changeColor, #changeBackground {
+            margin: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="clock"></div>
+    <button id="changeColor" onclick="changeColor()" >Yazı Rengini Değiştir</button>
+    <button id="changeBackground" onclick="changeBackground()">Arka Planı Değiştir</button>
+
+    <script>
+
+        function updateClock() {                                                        // Saati güncelleyen fonksiyon                                                  
+            var now = new Date();                                                       // Şu anki zamanı alıyoruz
+            var clock = document.getElementById('clock');                               // Saati gösteren div'i seçiyoruz
+            clock.innerHTML = now.toLocaleTimeString();                                 // Saati divin html ine yazdırıyoruz
+        }
+
+        updateClock();                                                                  // Sayfa yüklendiğinde saati göstermek için updateClock fonksiyonunu çağırıyoruz
+        setInterval(updateClock, 1000);                                                 // 1 saniyede bir updateClock fonksiyonunu çağırıyoruz           
+
+        function changeColor() {                                                        // Yazı rengini değiştiren fonksiyon            
+            var clock = document.getElementById('clock');                               // Saati gösteren div'i seçiyoruz      
+            clock.style.color = generateRandomColor();                                  // Saatin yazı rengini random bir renk yapar
+        }
+
+        function generateRandomColor() {                                                // Random renk üreten fonksiyon
+            var randomColor = Math.floor(Math.random()*16777215).toString(16);          // 16777215 sayısı 0xFFFFFF sayısına eşittir ve bu sayı 16 lık tabanda 0xFFFFFF sayısına eşittir
+            return "#" + randomColor;                                                   // random renk kodunu döndürür
+        }
+
+        function changeBackground() {                                                   // Arka plan rengini değiştiren fonksiyon
+            var body = document.getElementsByTagName('body')[0];                        // body elementini seçiyoruz
+            body.style.backgroundColor = generateRandomColor();                         // body elementinin arka plan rengini random bir renk yapar
+        }
+    </script>
+</body>
+</html>

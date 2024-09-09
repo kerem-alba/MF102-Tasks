@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ehliyet Uygulaması</title>
+  </head>
+  <body>
+    <label>
+      Doğum Yılı:
+      <input type="number" id="dogumYili" />
+    </label>
+
+    <br /><br />
+
+    <button onclick="yasHesapla()">Hesapla</button>
+
+    <br /><br />
+
+    <div>
+      <input type="text" id="sonuc" disabled="disabled" />
+    </div>
+
+    <script>
+      function yasHesapla() {
+        var dogumYiliInput = document.getElementById("dogumYili");
+        var sonucInput = document.getElementById("sonuc");
+
+        var dogumYili = parseInt(dogumYiliInput.value);
+        var mevcutYil = new Date().getFullYear();
+        var yas = mevcutYil - dogumYili;
+
+        if (isNaN(dogumYili) || dogumYili > mevcutYil) {
+          alert("Bilgilerinizi kontrol ediniz.");
+          return;
+        }
+
+        if (yas > 17) {
+          sonucInput.value = "Ehliyet alabilir";
+        } else {
+          sonucInput.value = "Ehliyet alamaz";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Satış Fiyatı Hesaplama</title>
+  </head>
+  <body>
+    Alanı ve çevresi hesaplanacak olan dikdörtgen için;
+
+    <br /><br />
+
+    <label>
+      Kısa kenar:
+      <input type="number" id="kisa-kenar" />
+    </label>
+
+    <br /><br />
+
+    <label>
+      Uzun kenar:
+      <input type="number" id="uzun-kenar" />
+    </label>
+
+    <br /><br />
+
+    <button onclick="AlanVeCevreHesapla()">Hesapla</button>
+
+    <br /><br />
+
+    <div>
+      Alan:
+      <input type="number" id="alan" disabled="disabled" />
+
+      <br /><br />
+
+      Çevre:
+      <input type="number" id="cevre" disabled="disabled" />
+    </div>
+
+    <script>
+      function AlanVeCevreHesapla() {
+        var kisaKenar = document.getElementById("kisa-kenar");
+        var uzunKenar = document.getElementById("uzun-kenar");
+        var alan = document.getElementById("alan");
+        var cevre = document.getElementById("cevre");
+
+        var kisaKenar = parseFloat(kisaKenar.value);
+        var uzunKenar = parseFloat(uzunKenar.value);
+
+        if (isNaN(kisaKenar) || isNaN(uzunKenar)) {
+          alert("Bilgilerinizi kontrol ediniz.");
+          return;
+        }
+        var hesaplananAlan = kisaKenar * uzunKenar;
+        var hesaplananCevre = 2 * (kisaKenar + uzunKenar);
+
+        alan.value = hesaplananAlan;
+        cevre.value = hesaplananCevre;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Satış Fiyatı Hesaplama</title>
+  </head>
+  <body>
+    <label>
+      Fiyatını Girin:
+      <input type="number" id="fiyat" />
+    </label>
+
+    <br /><br />
+
+    <label>
+      Kar Oranını Girin:
+      <input type="number" id="kar" />
+    </label>
+
+    <br /><br />
+
+    <button onclick="satisFiyatiHesapla()">Hesapla</button>
+
+    <br /><br />
+
+    <div>
+      Satış Fiyatı:
+      <input type="number" id="satisFiyati" disabled="disabled" />
+    </div>
+
+    <script>
+      function satisFiyatiHesapla() {
+        var fiyatInput = document.getElementById("fiyat");
+        var karInput = document.getElementById("kar");
+        var satisFiyatiSpan = document.getElementById("satisFiyati");
+
+        var fiyat = parseFloat(fiyatInput.value);
+        var kar = parseFloat(karInput.value);
+
+        if (isNaN(fiyat) || isNaN(kar)) {
+          alert("Bilgilerinizi kontrol ediniz.");
+          return;
+        }
+
+        var satisFiyati = fiyat * (1 + kar / 100);
+        satisFiyatiSpan.value = satisFiyati.toFixed(1);
+      }
+    </script>
+  </body>
+</html>

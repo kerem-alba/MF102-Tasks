@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2b - 4ac Hesaplama</title>
+  </head>
+  <body>
+    <label>
+      a:
+      <input type="number" id="a" />
+    </label>
+
+    <br /><br />
+
+    <label>
+      b:
+      <input type="number" id="b" />
+    </label>
+
+    <br /><br />
+
+    <label>
+      c:
+      <input type="number" id="c" />
+    </label>
+
+    <br /><br />
+
+    <button onclick="hesapla()">Hesapla</button>
+
+    <br /><br />
+
+    <div>
+      2b - 4ac =:
+      <input type="number" id="sonuc" disabled="disabled" />
+    </div>
+
+    <script>
+      function hesapla() {
+        var aInput = document.getElementById("a");
+        var bInput = document.getElementById("b");
+        var cInput = document.getElementById("c");
+        var sonucInput = document.getElementById("sonuc");
+
+        var a = parseFloat(aInput.value);
+        var b = parseFloat(bInput.value);
+        var c = parseFloat(cInput.value);
+
+        if (isNaN(a) || isNaN(b) || isNaN(c)) {
+          alert("Bilgilerinizi kontrol ediniz.");
+          return;
+        }
+
+        var sonuc = 2 * b - 4 * a * c;
+        sonucInput.value = sonuc;
+      }
+    </script>
+  </body>
+</html>

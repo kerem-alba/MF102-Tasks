@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toplam Tutar Hesaplama</title>
+  </head>
+  <body>
+    <label>
+      Birim Fiyatını Girin:
+      <input type="number" id="birimFiyati" />
+    </label>
+
+    <br /><br />
+
+    <label>
+      Adet Girin:
+      <input type="number" id="adet" />
+    </label>
+
+    <br /><br />
+
+    <button onclick="toplamTutarHesapla()">Hesapla</button>
+
+    <br /><br />
+
+    <div>
+      Toplam Tutar:
+      <input type="number" id="toplamTutar" disabled="disabled" />
+    </div>
+
+    <script>
+      function toplamTutarHesapla() {
+        var birimFiyatiInput = document.getElementById("birimFiyati");
+        var adetInput = document.getElementById("adet");
+        var toplamTutarInput = document.getElementById("toplamTutar");
+
+        var birimFiyati = parseFloat(birimFiyatiInput.value);
+        var adet = parseFloat(adetInput.value);
+
+        if (isNaN(birimFiyati) || isNaN(adet)) {
+          alert("Bilgilerinizi kontrol ediniz.");
+          return;
+        }
+
+        var toplamTutar = birimFiyati * adet;
+        toplamTutarInput.value = toplamTutar;
+      }
+    </script>
+  </body>
+</html>

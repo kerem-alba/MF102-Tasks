@@ -1,0 +1,132 @@
+body {
+    font-family: SoDoSans, sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 12px; 
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navbar-left, .navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left svg {
+    width: 40px; 
+    height: 40px;
+}
+
+.navbar-left div {
+    margin-left: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.navbar-right .sign-in {
+    background-color: white; 
+    padding: 5px 18px; 
+    border: 1px solid black;
+    border-radius: 25px; 
+    margin-left: 15px; 
+}
+
+.navbar-right .join-now {
+    background-color: black; 
+    color: white;
+    padding: 5px 18px; 
+    border-radius: 25px; 
+    margin-left: 15px; 
+}
+
+.find-a-store {
+    display: flex;
+    align-items: center;
+}
+
+.gradient-line {
+    border: 0;
+    height: 6px;
+    background: linear-gradient(to bottom, #c98885, white);
+}
+
+
+/* Container */
+
+.container {
+    padding: 20px;
+    text-align: center;
+    min-width: 500px;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.product {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1300px; 
+}
+
+.product-left {
+    flex: 1;
+}
+
+.product-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-title {
+    font-size: 38px ;
+    color: white;
+}
+
+.product-description {
+    font-size: 18px ;
+    padding: 20px 36px;
+}
+
+
+.product-button {
+    padding: 5px 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    margin:0px auto;
+}
+
+.product-button-white {
+    color: white;
+    border: 1px solid white;
+}
+
+.product-button-black {
+    color: black;
+    border: 1px solid black;
+}
+
+.footer{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 14px;
+}
